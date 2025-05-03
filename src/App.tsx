@@ -9,6 +9,9 @@ function App() {
     //@ts-ignore
     window.SpeechRecognition || window.webkitSpeechRecognition;
   const recognition = new SpeechRecognition();
+  if (!SpeechRecognition) {
+    return <>Unsupported Browser</>;
+  }
   recognition.continuous = true;
 
   recognition.onstart = () => {
