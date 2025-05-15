@@ -1,5 +1,5 @@
 import { createSignal } from "solid-js";
-
+import "baboolastyles/public/plastic.css";
 function App() {
   const listening = createSignal(false);
 
